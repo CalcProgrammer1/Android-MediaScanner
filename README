@@ -1,0 +1,35 @@
+Android MediaScanner by CalcProgrammer1
+---------------------------------------
+
+This application is a basic media organizer for Android.  It is designed to make organizing music simple.  When copying music from outside sources to your device, you no longer have to create folders.  Just dump all your media files into one directory and run MediaScanner.  It will read the tag information from each media file and use this information to create a folder structure to store the files.  Right now it only works with files in the root media directory that you select, it does not read files already in subdirectories.
+
+This application uses the JAudioTagger library (http://www.jthink.net/jaudiotagger/) to read media tags.  Licensing info for JAudioTagger may be found on their site.
+
+This application also requires the OpenIntents OI File Manager (or compatible, such as the Cyanogenmod File Manager) as it uses the OI PickDirectory functionality of this app.
+
+How To Use
+----------
+
+1: Open MediaScanner
+
+2: Click "Select Directory".  An OI File Manager window will open where you can navigate to your media directory.
+
+3: Once you are in your media root directory (for instance, /mnt/sdcard/Music) then press OK
+
+4: The scanner will run and a list of songs should appear.  This list uses the same structure that the folder system will.
+
+5: If the list results are correct, press the Update Folders button to create the folders and move the media files.  Your media folder is now organized.
+
+
+
+Known Issues
+------------
+
+There is no sanity checking on anything at the moment.  If your song tags have invalid characters, folders may not be created and files may not be moved.  For instance, the artists "AC/DC" contains an invalid character ("/") and will not move (I tried it).  I have also not tested untagged files, so it's anyone's guess as to what happens with these.
+
+The UI is also incredibly plain and could use a lot of work.
+
+License
+-------
+
+Not determined yet, but non-commercial use only.
